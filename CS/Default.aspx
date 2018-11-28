@@ -7,6 +7,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style>
+        .SvgCell {
+            filter: brightness(0.2) sepia(1) hue-rotate(180deg) saturate(5);
+        }
+
+        @media screen\0, @media screen\9 {	
+            .SvgCell {
+                background-color: #ff8800;
+            }	
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -26,11 +37,12 @@
                 </td>
             </tr>
         </table>
-        <dx:ASPxCallbackPanel ID="clbPanel" runat="server" ClientInstanceName="clbPanel" OnCallback="clbPanel_Callback"> 
+        <dx:ASPxCallbackPanel ID="clbPanel" runat="server" ClientInstanceName="clbPanel" OnCallback="clbPanel_Callback">
             <PanelCollection>
                 <dx:PanelContent runat="server">
                     <dx:ASPxGridView ID="gridView" runat="server" ClientInstanceName="grid" AutoGenerateColumns="false"
-                        KeyFieldName="FullIconID" Width="100%" OnCustomCallback="gridView_CustomCallback" EnableViewState="false">
+                        KeyFieldName="FullIconID" Width="100%" OnCustomCallback="gridView_CustomCallback" EnableViewState="false"
+                        OnHtmlDataCellPrepared="gridView_HtmlDataCellPrepared">
                         <Settings ShowHeaderFilterButton="true" VerticalScrollableHeight="400" ShowGroupPanel="true" GroupFormat="{1}{2}" ShowFooter="true" />
                         <SettingsSearchPanel Visible="true" />
                         <SettingsPager Mode="ShowPager" PageSize="15"></SettingsPager>
@@ -41,7 +53,7 @@
                             <dx:GridViewDataImageColumn VisibleIndex="0" Name="ImageColumn" Caption="Icon" Width="40">
                                 <Settings AllowGroup="False" />
                                 <DataItemTemplate>
-                                    <dx:ASPxImage ID="ASPxImage1" runat="server" ShowLoadingImage="true" EmptyImage-IconID='<%#Eval("FullIconID") %>'></dx:ASPxImage>
+                                    <dx:ASPxImage ID="ASPxImage1" runat="server" EmptyImage-IconID='<%#Eval("FullIconID") %>'></dx:ASPxImage>
                                 </DataItemTemplate>
                             </dx:GridViewDataImageColumn>
                             <dx:GridViewDataTextColumn FieldName="FullIconID" VisibleIndex="1" Width="350">
