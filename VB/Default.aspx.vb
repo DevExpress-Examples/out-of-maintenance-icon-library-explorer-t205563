@@ -1,6 +1,4 @@
-﻿Option Infer On
-
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Web
@@ -114,16 +112,6 @@ Partial Public Class _Default
                 PagerMode = GridViewPagerMode.ShowPager
                 gridView.SettingsPager.Mode = PagerMode
             End If
-        End If
-    End Sub
-
-    Protected Sub gridView_HtmlDataCellPrepared(ByVal sender As Object, ByVal e As ASPxGridViewTableDataCellEventArgs)
-        If e.DataColumn.Name <> "ImageColumn" Then
-            Return
-        End If
-        Dim iconIdValue = e.GetValue("FullIconID")
-        If iconIdValue IsNot Nothing AndAlso iconIdValue.ToString().Contains("_svg_") Then
-            e.Cell.CssClass = "SvgCell"
         End If
     End Sub
 End Class
