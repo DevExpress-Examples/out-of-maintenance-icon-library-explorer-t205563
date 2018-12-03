@@ -30,7 +30,7 @@
             <PanelCollection>
                 <dx:PanelContent runat="server">
                     <dx:ASPxGridView ID="gridView" runat="server" ClientInstanceName="grid" AutoGenerateColumns="false"
-                        KeyFieldName="FullIconID" Width="100%" OnCustomCallback="gridView_CustomCallback" EnableViewState="false">
+                        KeyFieldName="FullIconID" Width="100%" OnCustomCallback="gridView_CustomCallback" EnableViewState="false" OnHtmlDataCellPrepared="gridView_HtmlDataCellPrepared">
                         <Settings ShowHeaderFilterButton="true" VerticalScrollableHeight="400" ShowGroupPanel="true" GroupFormat="{1}{2}" ShowFooter="true" />
                         <SettingsSearchPanel Visible="true" />
                         <SettingsPager Mode="ShowPager" PageSize="15"></SettingsPager>
@@ -41,7 +41,7 @@
                             <dx:GridViewDataImageColumn VisibleIndex="0" Name="ImageColumn" Caption="Icon" Width="40">
                                 <Settings AllowGroup="False" />
                                 <DataItemTemplate>
-                                    <dx:ASPxImage ID="ASPxImage1" runat="server" ShowLoadingImage="true" EmptyImage-IconID='<%#Eval("FullIconID")%>'></dx:ASPxImage>
+                                    <dx:ASPxImage ID="ASPxImage1" runat="server" EmptyImage-IconID='<%#Eval("FullIconID")%>'></dx:ASPxImage>
                                 </DataItemTemplate>
                             </dx:GridViewDataImageColumn>
                             <dx:GridViewDataTextColumn FieldName="FullIconID" VisibleIndex="1" Width="350">
