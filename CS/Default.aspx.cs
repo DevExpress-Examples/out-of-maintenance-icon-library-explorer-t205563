@@ -108,5 +108,13 @@ public partial class _Default: System.Web.UI.Page {
                 gridView.SettingsPager.Mode = PagerMode = GridViewPagerMode.ShowPager;
         }
     }
+
+    protected void gridView_HtmlDataCellPrepared(object sender, ASPxGridViewTableDataCellEventArgs e) {
+        if(e.DataColumn.Name != "ImageColumn")
+            return;
+        var iconIdValue = e.GetValue("FullIconID");
+        if(iconIdValue != null && iconIdValue.ToString().Contains("_svg_white"))
+            e.Cell.BackColor = System.Drawing.Color.LightGray;
+    }
 }
 
