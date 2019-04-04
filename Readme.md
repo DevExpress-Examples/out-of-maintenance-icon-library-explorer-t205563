@@ -3,7 +3,7 @@
 
 * [IconInfo.cs](./CS/App_Code/IconInfo.cs) (VB: [IconInfo.vb](./VB/App_Code/IconInfo.vb))
 * [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
-* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx](./VB/Default.aspx))
+* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
 <!-- default file list end -->
 # Icon Library Explorer
 
