@@ -28,7 +28,7 @@
 ```
 
 
-<p><br><strong>See also:</strong><br /><a href="https://www.devexpress.com/Support/Center/p/T501932">How to use the DevExpress Icon Collection</a><br /><a href="https://demos.devexpress.com/ASPxMultiUseControlsDemos/Features/IconLibraryExplorer.aspx">Icon Library Explorer Demo</a></p>
+<p><br><strong>See also:</strong><br /><a href="https://www.devexpress.com/Support/Center/p/T501932">How to use the DevExpress Icon Collection</a><br /><a href="https://demos.devexpress.com/ASPxMultiUseControlsDemos/IconLibraryExplorer/IconLibraryExplorer.aspx">Icon Library Explorer Demo</a></p>
 
 <br/>
 
